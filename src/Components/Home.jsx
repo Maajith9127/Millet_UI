@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <section className="flex  items-center max-h-[600px] flex-col md:flex-row mt-20 justify-center   px-6">
-      {/* Left Side - Text Content */}
+    <section className="flex   items-center justify-center flex-col md:flex-row mt-20   px-6">
+   
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h1 className="text-7xl font-bold text-gray-800">
           Healthy & Tasty <span className="text-yellow-500">Millet Snacks</span>
@@ -20,12 +20,15 @@ const Home = () => {
       </div>
 
       {/* Right Side - Image Placeholder */}
-      <div className="md:w-1/2 ml-40 max-h-[400px] max-w-[400px]  flex justify-center mt-8 md:mt-0">
+      <div className=' '>
+
+      <div className="md:w-1/2 ml-40  max-h-[400px]  max-w-[400px]  flex justify-center items-center mt-8 md:mt-0">
         <img 
           src="src/assets/logo.jpeg" 
           alt="Millet Snacks" 
           className=" rounded-[30px]  shadow-lg"
         />
+      </div>
       </div>
     </section>
   )
