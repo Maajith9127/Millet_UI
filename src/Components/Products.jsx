@@ -1,0 +1,95 @@
+import React from "react";
+
+// Sample product data
+const products = [
+  {
+    id: 1,
+    name: "Millet Cookies",
+    image: "/src/assets/Product.jpeg",
+    description: "Crunchy and healthy millet-based cookies.",
+    price: "₹199",
+  },
+  {
+    id: 2,
+    name: "Ragi Chips",
+    image: "/src/assets/Product.jpeg",
+    description: "Delicious ragi chips packed with nutrients.",
+    price: "₹149",
+  },
+  {
+    id: 3,
+    name: "Jowar Energy Bars",
+    image: "/src/assets/Product.jpeg",
+    description: "High-protein energy bars made from jowar.",
+    price: "₹249",
+  },
+  {
+    id: 4,
+    name: "Bajra Puffs",
+    image: "/src/assets/Product.jpeg",
+    description: "Light and crispy millet puffs for guilt-free snacking.",
+    price: "₹129",
+  },
+  {
+    id: 3,
+    name: "Jowar Energy Bars",
+    image: "/src/assets/Product.jpeg",
+    description: "High-protein energy bars made from jowar.",
+    price: "₹249",
+  },
+  {
+    id: 4,
+    name: "Bajra Puffs",
+    image: "/src/assets/Product.jpeg",
+    description: "Light and crispy millet puffs for guilt-free snacking.",
+    price: "₹129",
+  },
+  {
+    id: 3,
+    name: "Jowar Energy Bars",
+    image: "/src/assets/Product.jpeg",
+    description: "High-protein energy bars made from jowar.",
+    price: "₹249",
+  },
+  {
+    id: 4,
+    name: "Bajra Puffs",
+    image: "/src/assets/Product.jpeg",
+    description: "Light and crispy millet puffs for guilt-free snacking.",
+    price: "₹129",
+  },
+];
+
+const Products = () => {
+  return (
+    <section className=" px-6  min-h-screen">
+      <h2 className="text-4xl font-bold text-center mb-8">Our Millet Products</h2>
+
+      {/* Grid Layout */}
+      <div className="grid p-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {products.map((product) => (
+          <div key={product.id} className="bg-white shadow-lg      rounded-lg p-4 text-center">
+            {/* Product Image */}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full w-full  rounded-lg"
+            />
+
+            {/* Product Details */}
+            <h3 className="text-xl font-semibold mt-4">{product.name}</h3>
+            <p className="text-gray-600 mt-2">{product.description}</p>
+            <p className="text-lg font-bold text-green-600 mt-2">{product.price}</p>
+
+            {/* Add to Cart Button */}
+            <button className="mt-4 bg-yellow-500 px-4 py-2 rounded-lg text-black font-semibold hover:bg-yellow-600 transition">
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Products;
